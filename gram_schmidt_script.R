@@ -80,11 +80,9 @@ checkTime <- function(matrixList, testedFun) {
 
 drawChart <- function() {
   myMatrices <- list()
-  nList <- list()
   for (num in seq(1, 1000, by = 100)) {
     newMatrix = createMatrix(num)
     myMatrices[[length(myMatrices) + 1]] <- newMatrix
-    nList <- c(nList, num)
   }
   loopDf <- checkTime(myMatrices, gramSchmidt)
   noLoopDf <- checkTime(myMatrices, gramSchmidtNoLoop)
